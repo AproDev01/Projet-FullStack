@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="card">
+    <h2>✏️ Modifier l'étudiant</h2>
+
+    <form (submit)="onSubmit()">
+      <!-- Nom -->
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          [(ngModel)]="etudiant.nom"
+          required
+          placeholder="Entrez le nom"
+        />
+      </div>
+
+      <!-- Prénom -->
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          [(ngModel)]="etudiant.prenom"
+          required
+          placeholder="Entrez le prénom"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="etudiant.email"
+          required
+          placeholder="Entrez l'email"
+        />
+      </div>
+
+      <!-- Matières -->
+      <div class="form-group">
+        <label>Matières :</label><br />
+        <label *ngFor="let matiere of matieres">
+          <input
+            type="checkbox"
+            [value]="matiere"
+            (change)="onCheckboxChange($event)"
+            [checked]="etudiant.matiere.includes(matiere)"
+          />
+          {{ matiere }}
+        </label>
+      </div>
+
+      <!-- Boutons -->
+      <div class="buttons">
+        <button type="submit" class="btn-save">💾 Enregistrer</button>
+        <button type="button" class="btn-back" (click)="goBack()">⬅ Retour</button>
+      </div>
+    </form>
+  </div>
+</div>

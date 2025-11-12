@@ -1,0 +1,96 @@
+.dashboard-container {
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+.alerts {
+  background: #fff;
+  margin:20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+  .alert {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+
+  .alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+}
+.btn-primary {
+  background-color: #007bff; // bleu Bootstrap classique
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #0056b3; // un bleu plus foncé au survol
+    transform: translateY(-2px); // léger effet de levée
+  }
+
+  &:active {
+    background-color: #004085; // encore plus foncé au clic
+    transform: translateY(0);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+}

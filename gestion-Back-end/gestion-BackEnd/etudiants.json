@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nom": "Doe",
+    "prenom": "John",
+    "age": 22,
+    "filiere": "Informatique"
+  },
+  {
+    "id": 2,
+    "nom": "Smith",
+    "prenom": "Jane",
+    "age": 24,
+    "filiere": "Mathématiques"
+  },
+  {
+    "id": 3,
+    "nom": "Brown",
+    "prenom": "Charlie",
+    "age": 21,
+    "filiere": "Physique"
+  },
+  {
+    "id": 4,
+    "nom": "Johnson",
+    "prenom": "Emily",
+    "age": 23,
+    "filiere": "Chimie"
+  }
+]

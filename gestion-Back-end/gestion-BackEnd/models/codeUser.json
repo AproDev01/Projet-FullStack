@@ -1,0 +1,23 @@
+[{
+        "nom": "hijid",
+        "prenom": "mxymsk",
+        "email": "ahmed@gmail.com",
+       "password": "0000",
+       "role":"USER"
+},
+{
+        "nom": "poeiu",
+        "prenom": "nmcjj",
+        "email": "fullstack@gmail.com",
+       "password": "00000",
+       "role":"USER"
+},
+{
+        
+"nom":"Dupuis",
+"prenom":"Thomas",
+"email":"dupuis@gmail.com",
+"password":"0000"
+}
+
+]

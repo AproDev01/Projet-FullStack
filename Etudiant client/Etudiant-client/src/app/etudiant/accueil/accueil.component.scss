@@ -1,0 +1,41 @@
+.accueil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+}
+
+.accueil-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.accueil-container p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: white;
+  color: #0078ff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #0078ff;
+  color: white;
+  transform: scale(1.05);
+}

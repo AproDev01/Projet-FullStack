@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<!-- Liste des cartes étudiants -->
+<div class="container">
+  <div class="header">
+    <div class="header-content">
+      <h2>Liste des Étudiants</h2>
+      <button class="btn-back" (click)="goToAddStudent()">
+        Ajouter un Étudiant
+      </button>
+    </div>
+  </div>
+  <div class="search-container">
+    <input
+      type="text"
+      class="search-input"
+      [formControl]="searchControl"
+      placeholder="Rechercher un étudiant"
+    />
+    
+     <input
+      type="text"
+      class="search-input"
+      [formControl]="searchMatiereControl"
+      placeholder="Rechercher par matière"
+    />
+  </div>
+
+  <div class="cards">
+    <div
+      *ngFor="let etudiant of listEtudiant"
+      class="card"
+      (click)="navigateToDetails(etudiant.id)"
+    >
+     <img
+    [src]="etudiant.photoUrl ? etudiant.photoUrl : 'https://api.dicebear.com/9.x/adventurer/svg?seed=' + etudiant.prenom"
+    alt="Photo de l'étudiant"
+    class="student-photo"
+  />
+      <h3>{{ etudiant.id + " - " + etudiant.nom + " " + etudiant.prenom }}</h3>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="pagination">
+    <button
+      class="btn-back"
+      (click)="prevPage()"
+      [disabled]="currentPage === 1"
+    >
+      ⬅ Précédent
+    </button>
+    <span>Page {{ currentPage }} / {{ totalPages() }}</span>
+    <button
+      class="btn-back"
+      (click)="nextPage()"
+      [disabled]="currentPage === totalPages()"
+    >
+      Suivant ➡
+    </button>
+  </div>
+</div>

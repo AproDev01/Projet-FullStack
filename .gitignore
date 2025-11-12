@@ -1,0 +1,26 @@
+# --- Node.js ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Environnements ---
+.env
+.env.local
+
+# --- Build output ---
+dist/
+build/
+
+# --- IDE / Éditeurs ---
+.vscode/
+.idea/
+
+# --- Systèmes ---
+.DS_Store
+Thumbs.db
+
+# --- Angular spécifique ---
+.angular/
+
+# --- Logs ---
+*.log

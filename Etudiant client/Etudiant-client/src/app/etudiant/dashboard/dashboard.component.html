@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="dashboard-container">
+  <h1>Tableau de Bord</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h2>{{ totalEtudiants }}</h2>
+      <p>Étudiants inscrits</p>
+    </div>
+
+    <div class="card">
+      <h2>{{ totalUsers }}</h2>
+      <p>Utilisateurs</p>
+    </div>
+  </div>
+  <div class="alerts">
+    <h4>Alertes récentes</h4>
+    <div *ngFor="let alert of alerts" [ngClass]="['alert', 'alert-' + alert.type]">
+      <strong>{{alert.time }}</strong> - {{ alert.message }}
+    </div>
+  </div>
+  <button (click)="goToLogs()" class="btn btn-primary">
+  Voir les logs
+</button>
+</div>

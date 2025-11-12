@@ -1,0 +1,80 @@
+
+<div class="container">
+  <div class="card">
+    <h2>➕ Ajouter un nouvel étudiant</h2>
+
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          [(ngModel)]="etudiant.nom"
+          required
+          placeholder="Enter student's last name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          [(ngModel)]="etudiant.prenom"
+          required
+          placeholder="Enter student's first name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="etudiant.email"
+          required
+          placeholder="Enter student's email"
+        />
+      </div>
+
+      <div class="form-group">
+        <!--
+        <label *ngFor="let matiere of matieres">Matière</label>
+        <input
+          type="checkbox"
+          id="matiere"
+          name="matiere"
+          [value]="matiere"
+          (change)="onCheckboxChange($event)"
+          [checked]="etudiant.matiere.includes(matiere)"
+          required
+        />
+            {{ matiere }}-->
+        <label>Matières :</label><br />
+        <label *ngFor="let matiere of matieres">
+          <input
+            type="checkbox"
+            [value]="matiere"
+            (change)="onCheckboxChange($event)"
+            [checked]="etudiant.matiere.includes(matiere)"
+          /> {{ matiere }}
+        </label>
+      </div>
+      
+       <div class="form-group">
+        <label for="photo">Photo :</label>
+        <input type="file" id="photo" (change)="onFileSelected($event)" />
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-save">💾 Save</button>
+        <button type="button" class="btn-back" (click)="goBack()">
+          ⬅ Back
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

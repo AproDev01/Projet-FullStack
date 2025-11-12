@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nom": "Doe",
+    "prenom": "John",
+    "email": "john.doe@example.com",
+    "matiere": ["Math", "Science"]
+  },
+  {
+    "id": 2,
+    "nom": "Smith",
+    "prenom": "Jane",
+    "email": "jane.smith@example.com",
+    "matiere": ["English", "History"]
+  },
+  {
+    "id": 3,
+    "nom": "Brown",
+    "prenom": "Charlie",
+    "email": "charlie.brown@example.com",
+    "matiere": ["Art", "Music"]
+  },
+  {
+    "id": 4,
+    "nom": "Johnson",
+    "prenom": "Emily",
+    "email": "emily.johnson@example.com",
+    "matiere": ["Biology", "Chemistry"]
+  }
+]

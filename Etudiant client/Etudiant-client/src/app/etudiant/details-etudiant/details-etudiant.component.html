@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="card">
+    <!-- image profile -->
+    <img
+    [src]="etudiant.photoUrl ? etudiant.photoUrl : 'https://api.dicebear.com/9.x/adventurer/svg?seed=' + etudiant.prenom"
+    alt="Photo de l'étudiant"
+    class="student-photo"
+  />
+    <h3>{{ etudiant.id + " - " + etudiant.nom + " " + etudiant.prenom }}</h3>
+    <p>Email: {{ etudiant.email }}</p>
+    <p>Matières: {{ etudiant.matiere }}</p>
+    <div class="header-content">
+      <button class="btn-back" (click)="goBack()">⬅ Retour</button>
+            <button class="btn-back" (click)="updateEtudiant(etudiant.id) ">✏️ Modifier</button>
+      <button class="btn-delete" (click)="delete()">🗑️ Supprimer</button>
+    </div>
+  </div>
+</div>

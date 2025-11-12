@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2>📜 Historique des actions</h2>
+
+  <table class="table table-bordered table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Utilisateur</th>
+        <th>Action</th>
+        <th>Étudiant</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs">
+        <td>{{ log.userId?.nom || 'Inconnu' }}</td>
+        <td>{{ log.actionType }}</td>
+        <td>{{ log.etudiantId?.nom || '—' }}</td>
+       <td>{{ log.timestamp | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

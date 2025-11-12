@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .card {
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    }
+
+    .btn-save, .btn-back {
+      margin-right: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-save { background-color: #28a745; color: white; }
+    .btn-back { background-color: #6c757d; color: white; }
+  }
+}
